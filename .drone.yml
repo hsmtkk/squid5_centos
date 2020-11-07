@@ -16,7 +16,7 @@ steps:
   depends_on:
   - yaml_lint
   - dockerfile_lint
-  image: plugins/docker
+  image: plugins/docker:18.09
   settings:
     username: hsmtkk
     password:
@@ -29,7 +29,7 @@ steps:
   depends_on:
   - yaml_lint
   - dockerfile_lint
-  image: plugins/docker
+  image: plugins/docker:18.09
   settings:
     username: hsmtkk
     password:
