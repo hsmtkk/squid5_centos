@@ -10,5 +10,5 @@ steps:
 - name: dockerfile_lint
   image: hadolint/hadolint:v1.18.1
   commands:
-  - hadolint centos6/Dockerfile
-  - hadolint centos7/Dockerfile
+  - hadolint --ignore DL3033 centos6/Dockerfile
+  - hadolint --ignore DL3033 centos7/Dockerfile
