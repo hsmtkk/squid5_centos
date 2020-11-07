@@ -6,9 +6,9 @@ steps:
 - name: yaml_lint
   image: sdesbure/yamllint:latest
   commands:
-  - yamllint -d relaxed .drone.yml 
+  - yamllint -d relaxed .drone.yml
 - name: dockerfile_lint
-  image: hadolint/hadolint:v1.18.1 
+  image: hadolint/hadolint:v1.18.1
   commands:
   - hadolint centos6/Dockerfile
   - hadolint centos7/Dockerfile
