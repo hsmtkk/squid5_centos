@@ -12,3 +12,30 @@ steps:
   commands:
   - hadolint --ignore DL3033 centos6/Dockerfile
   - hadolint --ignore DL3033 centos7/Dockerfile
+- name: centos6_docker
+  depends_on:
+  - yaml_lint
+  - dockerfile_lint
+  image: plugins/docker
+  settings:
+    username: hsmtkk
+    password:
+      from_secret: dockerhub_token
+    repo: hsmtkk/squid5_centos
+    dockerfile: centos6/Dockerfile
+    tags:
+    - '6'
+- name: centos7_docker
+  depends_on:
+  - yaml_lint
+  - dockerfile_lint
+  image: plugins/docker
+  settings:
+    username: hsmtkk
+    password:
+      from_secret: dockerhub_token
+    repo: hsmtkk/squid5_centos
+    dockerfile: centos6/Dockerfile
+    tags:
+    - '7'
+
