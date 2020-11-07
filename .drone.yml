@@ -4,7 +4,7 @@ type: docker
 name: default
 steps:
 - name: yaml_lint
-  imange: sdesbure/yamllint:latest
+  image: sdesbure/yamllint:latest
   commands:
   - yamllint -d relaxed .drone.yml 
 - name: dockerfile_lint
