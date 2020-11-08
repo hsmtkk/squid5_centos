@@ -36,7 +36,7 @@ steps:
     password:
       from_secret: dockerhub_token
     repo: hsmtkk/squid5_centos
-    dockerfile: centos6/Dockerfile
+    dockerfile: centos7/Dockerfile
     pull_image: true
     tags:
     - '7'
