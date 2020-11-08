@@ -11,7 +11,7 @@ RUN yum -y install bzip2 gcc gcc-c++ make perl \
 WORKDIR /usr/local/src/squid-5.0.4-20201013-r6b13b73d3
 
 RUN ./configure --prefix=/usr/local/squid \
- && cat config.log \
+ || cat config.log \
  && make \
  && make install
 
