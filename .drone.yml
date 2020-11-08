@@ -10,8 +10,8 @@ steps:
 - name: dockerfile_lint
   image: hadolint/hadolint:v1.18.1
   commands:
-  - hadolint --ignore DL3033 centos6/Dockerfile
-  - hadolint --ignore DL3033 centos7/Dockerfile
+  - hadolint --ignore DL3031 --ignore DL3033 centos6/Dockerfile
+  - hadolint --ignore DL3031 --ignore DL3033 centos7/Dockerfile
 - name: centos6_docker
   depends_on:
   - yaml_lint
